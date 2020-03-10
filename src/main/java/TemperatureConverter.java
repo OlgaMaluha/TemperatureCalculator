@@ -4,9 +4,9 @@ public class TemperatureConverter {
 
     public TemperatureConverter(){}
 
-    public Double celsiusToFahrenheit(Double c){
-        if(c < MINIMUM_CELSIUS_DEGREE) errorMessage();
-        return 1.8* c + 32;
+    public Double celsiusToFahrenheit(double c) {
+        Celsius temp = new Celsius(c);
+        return temp.toFahrenheit();
     }
 
     public Double fahrenheitToCelsius(Double f){
@@ -15,8 +15,8 @@ public class TemperatureConverter {
     }
 
     public Double celsiusToKelvin(Double c){
-        if (c < MINIMUM_CELSIUS_DEGREE) errorMessage();
-        return c + 273.15;
+        Celsius temp = new Celsius(c);
+        return temp.toKelvin();
     }
 
     public Double kelvinToCelsius(Double k){
