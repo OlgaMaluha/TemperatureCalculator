@@ -21,11 +21,6 @@ public class Celsius {
         return newTemp;
     }
 
-    private void validateValue(double value) {
-        if (value < MINIMUM_CELSIUS_DEGREE) {
-            throw new IllegalArgumentException("Temperature cannot be lower then zero");
-        }
-    }
     public double toFahrenheit(){
         return value * 1.8+32;
     }
@@ -56,4 +51,9 @@ public class Celsius {
         return new Celsius(this.value / divisor);
     }
 
+    private void validateValue(double value) {
+        if (value < MINIMUM_CELSIUS_DEGREE) {
+            throw new IllegalArgumentException("Temperature cannot be lower then zero");
+        }
+    }
 }
